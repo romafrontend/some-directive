@@ -30,8 +30,11 @@ export class AppPopupDirective {
             this.componentRef.instance.initPopup = this.appPopup;
             let element: HTMLElement = <HTMLElement>this.componentRef.location.nativeElement;
             element.style.position = 'absolute';
-            element.style.top = containerBounding.top + 'px';
+            element.style.top = containerBounding.top + 30 + 'px';
             element.style.left = containerBounding.left + 'px';
+            element.style.padding = '10px'
+            element.style.backgroundColor = 'rgba(0,0,0,.03)';
+            element.style.boxShadow = '0 2px 12px 0 rgba(0,0,0,.3)';
 
             this.isPopup = true;
         }
